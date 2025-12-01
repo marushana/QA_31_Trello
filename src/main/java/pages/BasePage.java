@@ -1,6 +1,12 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BasePage{
     static WebDriver driver;
@@ -15,5 +21,11 @@ public class BasePage{
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void clickWait(WebElement element){
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(element))
+                .click();
     }
 }
