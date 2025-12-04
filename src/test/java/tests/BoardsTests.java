@@ -3,14 +3,15 @@ package tests;
 import dto.Board;
 import dto.User;
 import manager.AppManager;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.BasePage;
-import pages.BoardsPage;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
+import utils.TestNgListener;
 
 import java.util.Random;
+@Listeners(TestNgListener.class)
 
 public class BoardsTests extends AppManager {
     @BeforeMethod
@@ -30,5 +31,19 @@ public class BoardsTests extends AppManager {
         BoardsPage boardsPage = new BoardsPage(getDriver());
         boardsPage.createNewBoard(board);
         boardsPage.clickBtnCreate();
+        Assert.assertTrue(new MyBoardPage(getDriver()).isBoardNamePresent(board.getBoardTitle()));
+
+    }
+
+    @Test
+    public void createNewBoardNegativeTest_EmptyBoardTitle(){
+
+        Board board = Board.builder()
+                .boardTitle("").build();
+        BoardsPage boardsPage = new BoardsPage(getDriver());
+        boardsPage.createNewBoard(board);
+        Assert.assertTrue(boardsPage.isBtnCreateNotClickable());
+
+
     }
 }
