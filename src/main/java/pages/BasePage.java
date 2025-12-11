@@ -33,7 +33,7 @@ public class BasePage{
 
     public boolean isTextValidInElement(WebElement element, String text) {
         try {
-            return new WebDriverWait(driver, Duration.ofSeconds(5))
+            return new WebDriverWait(driver, Duration.ofSeconds(10))
                     .until(ExpectedConditions.textToBePresentInElement(element, text));
         } catch (NoSuchElementException| TimeoutException e){
             System.out.println("created exception");
