@@ -27,6 +27,18 @@ public class BoardsPage extends BasePage{
     WebElement btnCreate;
     @FindBy(xpath = "//span[@class = 'VmbXKMJLSqfD0U']")
     WebElement popUpMessageDelete;
+    @FindBy(xpath = "//button[@data-testid='header-member-menu-button']")
+    WebElement btnAccount;
+    @FindBy(xpath = "//span[text() = 'Manage account']")
+    WebElement btnManageAccount;
+
+    public void openMyAccount(){
+        clickWait(btnAccount);
+        clickWait(btnManageAccount);
+    }
+
+
+
 
     public boolean isPopUpMessageDelete(String text){
         return isTextValidInElement(popUpMessageDelete, text);
@@ -43,7 +55,7 @@ public class BoardsPage extends BasePage{
     }
 
     public boolean validateUrl(String url){
-        return new WebDriverWait(driver, Duration.ofSeconds(5))
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.urlContains(url));
     }
 
