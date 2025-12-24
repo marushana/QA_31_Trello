@@ -16,7 +16,7 @@ import java.util.Random;
 public class DeleteBoardsTests extends AppManager {
     BoardsPage boardsPage;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void login(){
         User user =  User.builder()
                 .email("marushana@gmail.com")
@@ -31,7 +31,7 @@ public class DeleteBoardsTests extends AppManager {
         boardsPage.clickBtnCreate();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void deleteBoardPositiveTest(){
         new MyBoardPage(getDriver()).deleteBoard();
         Assert.assertTrue(boardsPage.isPopUpMessageDelete("Board deleted."));

@@ -1,0 +1,8 @@
+19:17:29.660 [Test worker] INFO  utils.TestNgListener - Start testing information: Thu Dec 11 19:17:29 IST 2025
+19:17:36.088 [Test worker] INFO  manager.AppManager - Start test -->createNewBoardPositiveTestWithDataProviderFromFile
+19:17:49.203 [Test worker] INFO  utils.TestNgListener - null start test --> createNewBoardPositiveTestWithDataProviderFromFile
+19:17:58.194 [Test worker] INFO  utils.TestNgListener - null success test --> createNewBoardPositiveTestWithDataProviderFromFile
+19:18:04.863 [Test worker] INFO  manager.AppManager - Start test -->createNewBoardPositiveTestWithDataProviderFromFile
+19:18:19.361 [Test worker] INFO  utils.TestNgListener - null start test --> createNewBoardPositiveTestWithDataProviderFromFile
+19:18:28.261 [Test worker] INFO  utils.TestNgListener - null success test --> createNewBoardPositiveTestWithDataProviderFromFile
+19:18:28.362 [Test worker] INFO  utils.TestNgListener - Stop testing information: Thu Dec 11 19:18:28 IST 2025

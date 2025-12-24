@@ -1,0 +1,5 @@
+19:06:28.882 [Test worker] INFO  utils.TestNgListener - Start testing information: Mon Dec 08 19:06:28 IST 2025
+19:06:38.312 [Test worker] INFO  manager.AppManager - Start test -->createNewBoardPositiveTest
+19:07:15.848 [Test worker] INFO  utils.TestNgListener - null start test --> createNewBoardPositiveTest
+19:07:15.893 [Test worker] INFO  utils.TestNgListener - null skipped test --> createNewBoardPositiveTest
+19:07:15.949 [Test worker] INFO  utils.TestNgListener - Stop testing information: Mon Dec 08 19:07:15 IST 2025

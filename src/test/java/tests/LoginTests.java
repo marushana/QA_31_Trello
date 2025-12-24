@@ -11,7 +11,7 @@ import pages.LoginPage;
 import java.util.concurrent.TimeoutException;
 
 public class LoginTests extends AppManager {
-    @Test
+    @Test(groups = "smoke")
     public void loginPositiveTest(){
         User user =  User.builder()
                 .email("marushana@gmail.com")
@@ -21,7 +21,7 @@ public class LoginTests extends AppManager {
         Assert.assertTrue(new BoardsPage(getDriver()).validateUrl("boards"));
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void loginNegativeTest(){
         User user =  User.builder()
                 .email("marushana@gmail.com")

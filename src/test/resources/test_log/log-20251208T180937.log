@@ -1,0 +1,8 @@
+18:09:38.099 [Test worker] INFO  utils.TestNgListener - Start testing information: Mon Dec 08 18:09:38 IST 2025
+18:09:45.921 [Test worker] INFO  manager.AppManager - Start test -->createNewBoardNegativeTest_EmptyBoardTitle
+18:10:13.178 [Test worker] INFO  utils.TestNgListener - null start test --> createNewBoardNegativeTest_EmptyBoardTitle
+18:10:19.385 [Test worker] INFO  utils.TestNgListener - null success test --> createNewBoardNegativeTest_EmptyBoardTitle
+18:10:25.281 [Test worker] INFO  manager.AppManager - Start test -->createNewBoardPositiveTest
+18:10:44.092 [Test worker] INFO  utils.TestNgListener - null start test --> createNewBoardPositiveTest
+18:10:58.219 [Test worker] INFO  utils.TestNgListener - null failed test --> createNewBoardPositiveTest
+18:10:58.295 [Test worker] INFO  utils.TestNgListener - Stop testing information: Mon Dec 08 18:10:58 IST 2025

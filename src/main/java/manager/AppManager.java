@@ -21,16 +21,17 @@ public class AppManager {
     public AppManager() {
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(Method method) {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--lang=en");
+
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         logger.info("Start test -->" + method.getName());
     }
 
-    @AfterMethod(enabled = false)
+    @AfterMethod(alwaysRun = true)
     public void tearDown(Method method) {
         if (driver != null)
             driver.quit();

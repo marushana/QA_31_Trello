@@ -16,7 +16,7 @@ import java.util.Random;
 @Listeners(TestNgListener.class)
 
 public class BoardsTests extends AppManager {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void login(){
         User user =  User.builder()
                 .email("marushana@gmail.com")
@@ -25,7 +25,7 @@ public class BoardsTests extends AppManager {
         new LoginPage(getDriver()).login(user);
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void createNewBoardPositiveTest(){
         int i = new Random().nextInt(1000);
         Board board = Board.builder()
@@ -37,7 +37,7 @@ public class BoardsTests extends AppManager {
 
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void createNewBoardNegativeTest_EmptyBoardTitle(){
 
         Board board = Board.builder()

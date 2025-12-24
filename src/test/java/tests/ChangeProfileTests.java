@@ -9,12 +9,13 @@ import pages.AtlasianProfilePage;
 import pages.BoardsPage;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.RetryAnalyzer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChangeProfileTests extends AppManager {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void login(){
         User user =  User.builder()
                 .email("marushana@gmail.com")
@@ -23,7 +24,7 @@ public class ChangeProfileTests extends AppManager {
         new LoginPage(getDriver()).login(user);
     }
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class, groups = "smoke")//for case of instability
     public void changeProfilePhoto(){
         new BoardsPage(getDriver()).openMyAccount();
         List<String> tabs = new ArrayList<>(getDriver().getWindowHandles());
